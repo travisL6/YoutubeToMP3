@@ -1,0 +1,29 @@
+{
+  "name": "youtubetomp3",
+  "version": "1.0.0",
+  "description": "Website that allows user to enter a youtube link and convert it into an mp3 file.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/travisL6/YoutubeToMP3.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/travisL6/YoutubeToMP3/issues"
+  },
+  "homepage": "https://github.com/travisL6/YoutubeToMP3#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "node-fetch": "^2.6.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
