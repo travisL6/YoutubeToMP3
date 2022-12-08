@@ -40,7 +40,7 @@ app.post("/convert", async (req, res) => {
         if(fetchResponse.Status === "Success") {
             return res.render("index", {success : true, title : fetchResponse.Title, link : fetchResponse.Download_url});
         } else {
-            return res.render("index", {success : false, message: fetchResponse.Status});
+            return res.render("index", {success : false, message : fetchResponse.Status});
         }
     }
 })
