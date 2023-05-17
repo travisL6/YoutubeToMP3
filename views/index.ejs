@@ -15,11 +15,10 @@
     <div class="top-container">
         <form action="/convert" method="POST" id="form">
             <h1><i class="fa-brands fa-youtube" style="color:red"></i>Youtube to MP3 Converter</h1>
-            <h4>Enter the video ID to get started</h4>
-            <h5>Tip: The video id in the youtube link is the text after v= and before the & symbol if there is one.</h5>
-            <h5>Example: https://www.youtube.com/watch?v=<mark>dXaDBPpfZhY</mark>&list=LL&index=1</h5>
+            <h4>Enter the video's url to get started</h4>
+            <h5>The website will crash if you enter a bad url! I will try and fix it later! Also, the video must be less than 6 minutes long. The converter can take up to 30 seconds.</h5>
             <div>
-                <input type="text" name="videoID" placeholder="Video ID"><button id="convert-btn">Convert</button>
+                <input type="text" name="videoID" placeholder="Video URL"><button id="convert-btn">Convert</button>
             </div>
         </form>
     </div>
