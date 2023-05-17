@@ -28,7 +28,7 @@ app.post("/convert", async (req, res) => {
     if(videoID === undefined || videoID === "" || videoID === null) {
         return res.render("index", {success : false, message : "Please enter a video ID"});
     } else {
-        const fetchAPI = await fetch('https://youtube-to-mp32.p.rapidapi.com/api/yt_to_mp3?video_id=' + videoID, {
+        const fetchAPI = await fetch("https://youtube-mp3-downloader2.p.rapidapi.com/ytmp3/ytmp3/?url=" + videoID, {
             "method" : "GET",
             "headers" : {
                 "x-rapidapi-key" : process.env.API_KEY,
@@ -36,11 +36,11 @@ app.post("/convert", async (req, res) => {
             }
         });
         const fetchResponse = await fetchAPI.json();
-
-        if(fetchResponse.Status === "Success") {
-            return res.render("index", {success : true, title : fetchResponse.Title, link : fetchResponse.Download_url});
+        console.log(fetchResponse.title);
+        if(fetchResponse.title != "") {
+            return res.render("index", {success : true, title : fetchResponse.title, link : fetchResponse.link});
         } else {
-            return res.render("index", {success : false, message : fetchResponse.Status});
+            return res.render("index", {success : false, message : "failure"});
         }
     }
 })
